@@ -62,3 +62,35 @@ If you want to run the standalone PDF extractor helper in `script/extract_pdf_te
 
 - Type check: `npm run check`
 - LLM connectivity check: `npm run check:llm`
+
+## HTTPS Deployment (Docker + Caddy)
+
+This repo now includes:
+- `Dockerfile` for the app image
+- `docker-compose.prod.yml` for app + Caddy
+- `Caddyfile` for automatic HTTPS (Let's Encrypt)
+- `.env.production.example` template
+
+### Requirements
+
+- A VPS/server with Docker and Docker Compose
+- A domain name pointing to your server public IP
+- Ports `80` and `443` open in firewall/security group
+
+### Steps
+
+1. Copy production env template:
+   `cp .env.production.example .env.production`
+2. Edit `.env.production` and set:
+   - `DOMAIN` to your real domain
+   - `DATABASE_URL`, `SESSION_SECRET`, and API keys
+3. Start stack:
+   `docker compose --env-file .env.production -f docker-compose.prod.yml up -d --build`
+4. Verify:
+   - `https://your-domain.com`
+   - SSL certificate is issued automatically by Caddy
+
+### Notes
+
+- In production, Express now trusts the proxy so secure session cookies work correctly behind HTTPS.
+- If DNS is not pointed correctly or ports are blocked, certificate issuance will fail.

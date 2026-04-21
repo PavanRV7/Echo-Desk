@@ -8,6 +8,12 @@ import { env } from "./env";
 const app = express();
 const httpServer = createServer(app);
 
+// Required when TLS is terminated by a reverse proxy (e.g., Caddy/Nginx)
+// so secure cookies work correctly in production.
+if (env.NODE_ENV === "production") {
+  app.set("trust proxy", 1);
+}
+
 declare module "http" {
   interface IncomingMessage {
     rawBody: unknown;

@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+﻿import { motion } from "framer-motion";
 import { ShieldCheck, Lock, Eye, HeartHandshake } from "lucide-react";
 
 export default function About() {
@@ -53,7 +53,7 @@ export default function About() {
           <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary to-transparent opacity-30" />
           <h2 className="text-4xl font-black font-display mb-8">Official Disclaimer</h2>
           <p className="text-xl text-indigo-100/60 leading-relaxed max-w-3xl mx-auto font-light">
-            RecruitGuard AI utilizes advanced probabilistic modeling to evaluate recruitment authenticity. 
+            Echo Desk utilizes advanced probabilistic modeling to evaluate recruitment authenticity. 
             While our engine is state-of-the-art, it should complement and not replace your own professional due diligence. 
             Never transfer funds or sensitive banking details for any employment opportunity.
           </p>
@@ -82,3 +82,4 @@ function AboutCard({ icon: Icon, title, description, delay }: { icon: any, title
     </motion.div>
   );
 }
+

@@ -1,4 +1,4 @@
-import { ShieldCheck } from "lucide-react";
+﻿import { ShieldCheck } from "lucide-react";
 import { Link } from "wouter";
 
 export function Footer() {
@@ -11,7 +11,7 @@ export function Footer() {
             <div className="p-3 bg-white/5 rounded-2xl group-hover:scale-110 transition-transform duration-300">
               <ShieldCheck className="h-8 w-8 text-primary shadow-2xl" />
             </div>
-            <span className="text-2xl font-bold font-display text-white tracking-tighter">RecruitGuard AI</span>
+            <span className="text-2xl font-bold font-display text-white tracking-tighter">Echo Desk</span>
           </div>
           
           <div className="flex flex-wrap justify-center gap-12 text-lg font-medium text-indigo-100/40">
@@ -29,3 +29,4 @@ export function Footer() {
     </footer>
   );
 }
+

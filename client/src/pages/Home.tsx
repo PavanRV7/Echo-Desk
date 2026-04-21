@@ -1,4 +1,4 @@
-import { Link } from "wouter";
+﻿import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { ShieldCheck, Search, FileText, CheckCircle2, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
@@ -28,7 +28,7 @@ export default function Home() {
               <span className="text-gradient">With Advanced AI</span>
             </h1>
             <p className="text-xl text-indigo-100/80 max-w-2xl mx-auto mb-10 leading-relaxed font-light">
-              RecruitGuard uses TrustGraph, an LLM + retrieval signal engine, to spot fraud patterns in seconds.
+              Echo Desk uses TrustGraph, an LLM + retrieval signal engine, to spot fraud patterns in seconds.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
               <Link href="/analyze">
@@ -102,3 +102,4 @@ function FeatureCard({ icon: Icon, title, description, delay }: { icon: any, tit
     </motion.div>
   );
 }
+

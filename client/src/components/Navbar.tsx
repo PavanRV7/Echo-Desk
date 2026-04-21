@@ -1,4 +1,4 @@
-import { Link, useLocation } from "wouter";
+﻿import { Link, useLocation } from "wouter";
 import { ShieldCheck, Menu, X } from "lucide-react";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
@@ -30,7 +30,7 @@ export function Navbar() {
               <div className="absolute inset-0 bg-primary/30 blur-xl rounded-full animate-pulse" />
             </div>
             <span className="text-2xl font-bold font-display tracking-tighter text-white">
-              RecruitGuard <span className="text-primary italic">AI</span>
+              Echo Desk
             </span>
           </Link>
           
@@ -148,3 +148,4 @@ export function Navbar() {
     </nav>
   );
 }
+
